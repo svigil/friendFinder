@@ -20,6 +20,9 @@
     <!-- Chosen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+
+
 </head>
 
 <body>
@@ -40,7 +43,7 @@
 
         <h3><strong>Question 1</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q1>
+        <div class="input-field col s12" id=q 1>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -53,7 +56,7 @@
 
         <h3><strong>Question 2</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q2>
+        <div class="input-field col s12" id=q 2>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -63,10 +66,10 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
         </div>
-        
+
         <h3><strong>Question 3</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q3>
+        <div class="input-field col s12" id=q 3>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -79,7 +82,7 @@
 
         <h3><strong>Question 4</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q4>
+        <div class="input-field col s12" id=q 4>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -92,7 +95,7 @@
 
         <h3><strong>Question 5</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q5>
+        <div class="input-field col s12" id=q 5>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -105,7 +108,7 @@
 
         <h3><strong>Question 6</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q6>
+        <div class="input-field col s12" id=q 6>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -118,7 +121,7 @@
 
         <h3><strong>Question 7</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q7>
+        <div class="input-field col s12" id=q 7>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -131,7 +134,7 @@
 
         <h3><strong>Question 8</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q8>
+        <div class="input-field col s12" id=q 8>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -144,7 +147,7 @@
 
         <h3><strong>Question 9</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q9>
+        <div class="input-field col s12" id=q 9>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -157,7 +160,7 @@
 
         <h3><strong>Question 10</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id = q10>
+        <div class="input-field col s12" id=q 10>
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -167,10 +170,10 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
         </div>
-        
+
         <br>
 
-        
+
         <br>
         <br>
 
@@ -187,16 +190,68 @@
 
     </div>
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, options);
-        });
-
-        // Or with jQuery
-
+        // Making a function for the dropdown Q's to work properly
         $(document).ready(function () {
             $('select').formSelect();
         });
+
+
+        // On pressing the submit button capture inputs
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            // Make sure the entire form is filled
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                $(".chosen-select").each(function () {
+
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            if (validateForm()) {
+                // Object to collect all of the values from the user input
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+                console.log(scores);
+
+                // Post the new user data to the friends API 
+                $.post("/api/friends", userData, function (data) {
+
+                    // Display the new best friend
+                    $("#match-name").text(data.name);
+                    $("#match-img").attr("src", data.photo);
+
+                });
+            } else {
+                alert("You have to answer all of questions to find your friend!");
+            }
+        });
+
+
 
     </script>
 
