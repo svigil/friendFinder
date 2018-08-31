@@ -21,14 +21,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
+    <!-- Change Font -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Poor+Story|Source+Code+Pro" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("friends2.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Metamorphous', cursive;
+        }
+
+        #text {
+            color: black;
+            text-shadow: -1px -1px white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
+            font-family: 'Source Code Pro', monospace;
+        }
+    </style>
+
 
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="text">
 
-        <h2>Survey Questions</h2>
+        <h2>Survey Compatibility Quantifiers</h2>
 
         <hr>
 
@@ -41,9 +65,9 @@
 
         <hr>
 
-        <h3><strong>Question 1</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 1>
+        <h3><strong>Compatibility Quantifier 1</strong></h3>
+        <h4>I love to take long walks on the beach!</h4>
+        <div class="input-field col s12" id="q1">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -54,9 +78,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 2</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 2>
+        <h3><strong>Compatibility Quantifier 2</strong></h3>
+        <h4>I enjoy being the center of attention.</h4>
+        <div class="input-field col s12" id="q2">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -67,9 +91,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 3</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 3>
+        <h3><strong>Compatibility Quantifier 3</strong></h3>
+        <h4>I value intelligent conversations more than hearing funny stories.</h4>
+        <div class="input-field col s12" id="q3">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -80,9 +104,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 4</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 4>
+        <h3><strong>Compatibility Quantifier 4</strong></h3>
+        <h4>I'd rather be on a desert island with my best friend than be in the middle of a crowd at a festival.</h4>
+        <div class="input-field col s12" id="q4">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -93,9 +117,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 5</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 5>
+        <h3><strong>Compatibility Quantifier 5</strong></h3>
+        <h4>I prefer a beautiful sunset over a mesmerizing full moon.</h4>
+        <div class="input-field col s12" id="q5">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -106,9 +130,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 6</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 6>
+        <h3><strong>Compatibility Quantifier 6</strong></h3>
+        <h4>I'd rather be rich in thought instead of being wealthy.</h4>
+        <div class="input-field col s12" id="q6">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -119,9 +143,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 7</strong></h3>
+        <h3><strong>Compatibility Quantifier 7</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 7>
+        <div class="input-field col s12" id="q7">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -132,9 +156,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 8</strong></h3>
+        <h3><strong>Compatibility Quantifier 8</strong></h3>
         <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 8>
+        <div class="input-field col s12" id="q8">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -145,9 +169,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 9</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 9>
+        <h3><strong>Compatibility Quantifier 9</strong></h3>
+        <h4>I prefer nights over mornings.</h4>
+        <div class="input-field col s12" id="q9">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -158,9 +182,9 @@
             </select>
         </div>
 
-        <h3><strong>Question 10</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id=q 10>
+        <h3><strong>Compatibility Quantifier 10</strong></h3>
+        <h4>I'd rather have a thought out debate over enjoying a show together.</h4>
+        <div class="input-field col s12" id="q10">
             <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -187,6 +211,35 @@
 
         <hr>
 
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub
+                        Repo
+                    </a></p>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div id="results-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-img" src="" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
     <script type="text/javascript">
@@ -245,9 +298,12 @@
                     $("#match-name").text(data.name);
                     $("#match-img").attr("src", data.photo);
 
+                    // Display modal of ne best friend
+                    $("#results-modal").modal("toggle");
+
                 });
             } else {
-                alert("You have to answer all of questions to find your friend!");
+                alert("You have to answer all of Compatibility Quantifiers to find your friend!");
             }
         });
 
