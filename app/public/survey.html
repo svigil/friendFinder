@@ -24,8 +24,9 @@
     <!-- Change Font -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Poor+Story|Source+Code+Pro" rel="stylesheet">
     <style>
+        /* Adding image to the background and making it static to scroll in the background */
         body {
-            background-image: url("friends2.jpg");
+            background-image: url("https://images.unsplash.com/photo-1517965623714-cbaadea459b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1237dd49af3ef64bfb489b11469fd0e9&auto=format&fit=crop&w=1350&q=80");
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -35,6 +36,7 @@
             font-family: 'Metamorphous', cursive;
         }
 
+        /* Making text legible for the background */
         #text {
             color: black;
             text-shadow: -1px -1px white,
@@ -67,8 +69,8 @@
 
         <h3><strong>Compatibility Quantifier 1</strong></h3>
         <h4>I love to take long walks on the beach!</h4>
-        <div class="input-field col s12" id="q1">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q1">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -80,8 +82,8 @@
 
         <h3><strong>Compatibility Quantifier 2</strong></h3>
         <h4>I enjoy being the center of attention.</h4>
-        <div class="input-field col s12" id="q2">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q2">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -93,8 +95,8 @@
 
         <h3><strong>Compatibility Quantifier 3</strong></h3>
         <h4>I value intelligent conversations more than hearing funny stories.</h4>
-        <div class="input-field col s12" id="q3">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q3">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -106,8 +108,8 @@
 
         <h3><strong>Compatibility Quantifier 4</strong></h3>
         <h4>I'd rather be on a desert island with my best friend than be in the middle of a crowd at a festival.</h4>
-        <div class="input-field col s12" id="q4">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q4">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -119,8 +121,8 @@
 
         <h3><strong>Compatibility Quantifier 5</strong></h3>
         <h4>I prefer a beautiful sunset over a mesmerizing full moon.</h4>
-        <div class="input-field col s12" id="q5">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q5">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -132,8 +134,8 @@
 
         <h3><strong>Compatibility Quantifier 6</strong></h3>
         <h4>I'd rather be rich in thought instead of being wealthy.</h4>
-        <div class="input-field col s12" id="q6">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q6">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -144,9 +146,9 @@
         </div>
 
         <h3><strong>Compatibility Quantifier 7</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id="q7">
-            <select>
+        <h4>I prefer face to face communication over digital communication.</h4>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q7">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -157,9 +159,9 @@
         </div>
 
         <h3><strong>Compatibility Quantifier 8</strong></h3>
-        <h4>I like to take long walks on the beach!</h4>
-        <div class="input-field col s12" id="q8">
-            <select>
+        <h4>If given </h4>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q8">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -171,8 +173,8 @@
 
         <h3><strong>Compatibility Quantifier 9</strong></h3>
         <h4>I prefer nights over mornings.</h4>
-        <div class="input-field col s12" id="q9">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q9">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -184,8 +186,8 @@
 
         <h3><strong>Compatibility Quantifier 10</strong></h3>
         <h4>I'd rather have a thought out debate over enjoying a show together.</h4>
-        <div class="input-field col s12" id="q10">
-            <select>
+        <div class="input-field col s12">
+            <select class="chosen-select" id="q10">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -213,31 +215,27 @@
 
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub
-                        Repo
+                <p><a href="/friends">API Friends List</a> | <a href="https://github.com/svigil/friendFinder">GitHub Repo
                     </a></p>
             </div>
         </footer>
 
-        <!-- Modal -->
-        <div id="results-modal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h2 class="modal-title"><strong>Best Match</strong></h2>
-                    </div>
-                    <div class="modal-body">
-                        <h2 id="match-name"></h2>
-                        <img id="match-img" src="" alt="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
 
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">See your results!</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Best Match</h4>
+                <p>A bunch of text</p>
+                <span id="matchName"></span>
+                <img id="matchPhoto" src="" />
+            </div>
+
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
         </div>
 
@@ -288,18 +286,22 @@
                         $("#q9").val(),
                         $("#q10").val()
                     ]
+
                 };
-                console.log(scores);
+                console.log(userData);
+
 
                 // Post the new user data to the friends API 
-                $.post("/api/friends", userData, function (data) {
+                $.post("/friends", userData, function (data) {
 
                     // Display the new best friend
-                    $("#match-name").text(data.name);
-                    $("#match-img").attr("src", data.photo);
+                    $("#matchPhoto").text(data.name);
+                    $("#matchName").attr("src", data.photo);
 
-                    // Display modal of ne best friend
-                    $("#results-modal").modal("toggle");
+                    // Display modal of new best friend
+                    $(document).ready(function () {
+                        $('.modal').modal();
+                    });
 
                 });
             } else {

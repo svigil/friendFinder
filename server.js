@@ -1,15 +1,16 @@
-
-
+// create npms required
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var router = require("./app/htmlRoutes");
-var api = require("./app/apiRoutes");
-var friends = require("./app/friends");
+var router = require("./app/routing/htmlRoutes");
+var api = require("./app/routing/apiRoutes");
+var friends = require("./app/data/friends");
 
 var app = express();
 
-var PORT = process.env.PORT || 3000;
+// Listening to the port
+
+var port = process.env.port || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -20,6 +21,6 @@ app.use("/friends", api);
 
 app.use("/", router);
 
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
+app.listen(port, function () {
+    console.log("App listening on port " + port);
 });
