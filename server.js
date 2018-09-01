@@ -12,7 +12,7 @@ var app = express();
 
 var port = process.env.port || 3000;
 
-// set up body-parser
+// set up the express app to handle data parsing
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
