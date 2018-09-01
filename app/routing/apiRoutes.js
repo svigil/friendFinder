@@ -13,6 +13,7 @@ router.get("/", function (req, res) {
     return res.json(friends);
 });
 
+// taking in user data
 router.get("/:friend", function (req, res) {
     var chosen = req.params.friend;
 
@@ -27,11 +28,14 @@ router.get("/:friend", function (req, res) {
     return res.json(false);
 });
 
+
+
 router.post("/", function (req, res) {
 
     var userInput = req.body;
-
+    // making route name with no spaces and lowercase for error handling
     userInput.routeName = userInput.name.replace(/\s+/g, "").toLowerCase();
+    // comparing scores to potential friends
     var totalArr = [];
     for (i = 0; i < friends.length; i++) {
         score1 = userInput.scores;
@@ -42,6 +46,7 @@ router.post("/", function (req, res) {
         };
         totalArr.push(total);
     };
+    // Match to new best friend
     friends.push(req.body);
     console.log(friends);
     var lowNum = Math.min.apply(null, totalArr);
