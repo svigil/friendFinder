@@ -8,9 +8,9 @@ var friends = require("./app/data/friends");
 
 var app = express();
 
-// Listening to the port
+// Listening to the PORT
 
-var port = process.env.port || 3000;
+var PORT = process.env.PORT || 3000;
 
 // set up the express app to handle data parsing
 
@@ -25,8 +25,8 @@ app.use("/friends", api);
 
 app.use("/", router);
 
-// Confirm app is listeing on the port
+// Confirm app is listeing on the PORT
 
-app.listen(port, function () {
-    console.log("App listening on port " + port);
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
 });

@@ -45,6 +45,7 @@ router.post("/", function (req, res) {
             total += Math.abs(parseInt(score1[j]) - score2[j]);
         };
         totalArr.push(total);
+        console.log(total);
     };
     // Match to new best friend
     friends.push(req.body);

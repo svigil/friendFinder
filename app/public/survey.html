@@ -289,6 +289,8 @@
 
                 };
                 console.log(userData);
+                // var instance = M.Modal.getInstance(elem);
+                // instance.open();
 
 
                 // Post the new user data to the friends API 
@@ -299,9 +301,9 @@
                     $("#matchName").attr("src", data.photo);
 
                     // Display modal of new best friend
-                    $(document).ready(function () {
-                        $('.modal').modal();
-                    });
+
+                    $('.modal').modal();
+
 
                 });
             } else {
