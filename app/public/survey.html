@@ -45,6 +45,17 @@
             1px 1px 0 white;
             font-family: 'Source Code Pro', monospace;
         }
+
+        #matchName {
+            font-size: 150%;
+            border-radius: 5%;
+        }
+
+        #matchPhoto {
+            height: 350px;
+            size: 10%;
+            border-radius: 5%;
+        }
     </style>
 
 
@@ -204,8 +215,8 @@
         <br>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn waves-effect waves-light btn-block btn-large" id="submit" name="action"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
+        <button type="submit" class="btn waves-effect waves-light btn-block btn-large" id="submit" name="action" href="#modal1">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
             Submit</button>
 
 
@@ -223,19 +234,20 @@
 
 
         <!------------------ Modal Trigger -------------------------->
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">See your results!</a>
+        <a class="waves-effect waves-light modal-trigger" id="results-modal" href="#modal1"></a>
 
         <!--------------------- Modal Structure ----------------------->
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Best Match</h4>
-                <p>A bunch of text</p>
+                <!-- <p>A bunch of text</p> -->
                 <span id="matchName"></span>
+                <br>
                 <img id="matchPhoto" src="" />
             </div>
 
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                <a href="/survey" class="modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
         </div>
 
@@ -295,16 +307,26 @@
 
                 // Post the new user data to the friends API 
                 $.post("/friends", userData, function (data) {
+                    console.log(data);
+                    console.log(data.name);
+                    console.log(data.photo);
+
 
                     // Display the new best friend
-                    $("#matchPhoto").text(data.name);
-                    $("#matchName").attr("src", data.photo);
+                    $("#matchName").text(data.name);
+                    $("#matchPhoto").attr("src", data.photo);
 
                     // Display modal of new best friend
 
-                    $('.modal').modal();
+                    // $('.modal').modal();
+                    $(".modal").show();
 
+                    // document.addEventListener('DOMContentLoaded', function () {
+                    // var elems = document.querySelectorAll('.modal');
+                    // var instances = M.Modal.init(elems, options);
+                    // });
 
+                    // $("#results-modal").modal();
                 });
             } else {
                 alert("You have to answer all of Compatibility Quantifiers to find your friend!");
